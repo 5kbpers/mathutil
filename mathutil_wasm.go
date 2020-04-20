@@ -13,12 +13,12 @@
 
 package mathutil
 
-// The maximum number uint can record
 const (
-	MaxUint = ^uint(0)
-	MinUint = 0
-	MaxInt  = int(MaxUint >> 1)
-	MinInt  = -MaxInt - 1
+	MaxUint     = ^uint(0)
+	MaxInt      = int(MaxUint >> 1)
+	MinInt      = -MaxInt - 1
+	IntBits     = 1 << (^uint(0)>>32&1 + ^uint(0)>>16&1 + ^uint(0)>>8&1 + 3)
+	UintPtrBits = 1 << (^uintptr(0)>>32&1 + ^uintptr(0)>>16&1 + ^uintptr(0)>>8&1 + 3)
 )
 
 // MaxUint64 returns the larger of a and b.

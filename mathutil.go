@@ -20,10 +20,11 @@ import (
 )
 
 const (
-	// MaxInt presents the maximum number of Int
-	MaxInt = mathutil.MaxInt
-	// MinInt presents the minimum number of Int
-	MinInt = mathutil.MinInt
+	MaxUint     = mathutil.MaxUint
+	MaxInt      = mathutil.MaxInt
+	MinInt      = mathutil.MinInt
+	IntBits     = mathutil.IntBits
+	UintPtrBits = mathutil.UintPtrBits
 )
 
 // MaxUint64 returns the larger of a and b.
